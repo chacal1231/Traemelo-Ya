@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Inspius. All rights reserved.
+ * Author: Phong Nguyen
+ * Author URI: http://inspius.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Inspius_Iscommerce::icymobi" title="IcyMobi" module="Inspius_Iscommerce" sortOrder="60" resource="Inspius_Iscommerce::icymobi"/>
+        <add id="Inspius_Iscommerce::config_icymobi" title="Settings" translate="title" module="Magento_Backend" sortOrder="0" parent="Inspius_Iscommerce::icymobi" resource="Inspius_Iscommerce::config_setting" />
+        <add id="Inspius_Iscommerce::config_icymobi_general" title="General" translate="title" module="Inspius_Iscommerce" sortOrder="10" parent="Inspius_Iscommerce::config_icymobi" action="adminhtml/system_config/edit/section/icymobi_config" resource="Inspius_Iscommerce::config_icymobi"/>
+        <add id="Inspius_Iscommerce::config_icymobi_help" title="Help" translate="title" module="Inspius_Iscommerce" sortOrder="1000" parent="Inspius_Iscommerce::config_icymobi" action="adminhtml/system_config/edit/section/icymobi_help" resource="Inspius_Iscommerce::config_icymobi"/>
+    </menu>
+</config>

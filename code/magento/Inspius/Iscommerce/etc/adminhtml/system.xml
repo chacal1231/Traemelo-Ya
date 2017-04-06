@@ -1,0 +1,107 @@
+<?xml version='1.0' ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="iscommerce" translate="label" sortOrder="800">
+            <label>IcyMobi Configuration</label>
+        </tab>
+        <section id="icymobi_config" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>General</label>
+            <tab>iscommerce</tab>
+            <resource>Inspius_Iscommerce::config_icymobi</resource>
+            <group id="maintenance" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Maintenance Settings</label>
+                <field id="disable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Maintenance Mode</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="disable_text" translate="label comment" type="textarea" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Maintenance Mode Text</label>
+                </field>
+            </group>
+            <group id="contact" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Contact Page</label>
+                <field id="map" translate="label" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Inspius\Iscommerce\Block\Adminhtml\System\Config\Address</frontend_model>
+                </field>
+                <field id="address" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Address</label>
+                </field>
+                <field id="latitude" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Latitude</label>
+                </field>
+                <field id="longitude" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Longitude</label>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="content" translate="label" type="textarea" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Content</label>
+                </field>
+            </group>
+            <group id="product_category" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Category Display Options</label>
+                <field id="root" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Root Category</label>
+                    <source_model>Inspius\Iscommerce\Model\Config\Source\Category</source_model>
+                </field>
+                <field id="display" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Category Page Display</label>
+                    <source_model>Inspius\Iscommerce\Model\Config\Source\CategoryDisplay</source_model>
+                </field>
+                <field id="order_by" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Categories By</label>
+                    <source_model>Inspius\Iscommerce\Model\Config\Source\SortCategoryBy</source_model>
+                </field>
+                <field id="order" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Direction</label>
+                    <source_model>Inspius\Iscommerce\Model\Config\Source\SortDirection</source_model>
+                </field>
+            </group>
+            <group id="product_display" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product Display Options</label>
+                <field id="order_by" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Products By</label>
+                    <source_model>Inspius\Iscommerce\Model\Config\Source\SortProductBy</source_model>
+                </field>
+                <field id="order" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Direction</label>
+                    <source_model>Inspius\Iscommerce\Model\Config\Source\SortDirection</source_model>
+                </field>
+            </group>
+            <group id="product_images" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product Images</label>
+                <field id="width" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Width</label>
+                    <comment>If left blank, the default value would be 500(px)</comment>
+                </field>
+                <field id="height" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Height</label>
+                    <comment>If left blank, the default value would be 500(px)</comment>
+                </field>
+            </group>
+        </section>
+        <section id="icymobi_help" sortOrder="9999" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Help</label>
+            <tab>iscommerce</tab>
+            <resource>Inspius_Iscommerce::config_icymobi</resource>
+            <frontend_model>Inspius\Iscommerce\Block\Adminhtml\System\Config\Helptitle</frontend_model>
+            <group id="help_general" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Maintenance Settings</label>
+                <field id="video" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Inspius\Iscommerce\Block\Adminhtml\System\Config\Help</frontend_model>
+                    <attribute type="video_link">https://www.youtube.com/embed/xIOHF_8S7IU</attribute>
+                </field>
+            </group>
+            <group id="help_contact" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Contact Page</label>
+                <field id="video" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Inspius\Iscommerce\Block\Adminhtml\System\Config\Help</frontend_model>
+                    <attribute type="video_link">https://www.youtube.com/embed/kSkQipnjfWc</attribute>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

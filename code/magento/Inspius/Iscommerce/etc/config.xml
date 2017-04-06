@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <icymobi_config>
+            <maintenance>
+                <disable_text>Your order cannot be completed at the moment. Please place an order via our website or phone. Our apologies for the inconvenience this may cause. We're working to fix this issue as soon as possible.</disable_text>
+            </maintenance>
+            <contact>
+                <address>Inspius Singapore</address>
+                <latitude>1.282183</latitude>
+                <longitude>103.85079900000005</longitude>
+            </contact>
+        </icymobi_config>
+    </default>
+</config>

@@ -1,0 +1,20 @@
+<?xml version='1.0' ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Inspius_Iscommerce::icymobi" title="Icymobi">
+                                <resource id="Inspius_Iscommerce::config_setting" title="Icymobi Module Config">
+                                    <resource id="Inspius_Iscommerce::config_icymobi" title="Icymobi General Config" sortOrder="10" />
+                                </resource>
+                            </resource>
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

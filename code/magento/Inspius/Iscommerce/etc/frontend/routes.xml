@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Inspius. All rights reserved.
+ * Author: Phong Nguyen
+ * Author URI: http://inspius.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="iscommerce" frontName="is-commerce">
+            <module name="Inspius_Iscommerce" />
+        </route>
+    </router>
+</config>
